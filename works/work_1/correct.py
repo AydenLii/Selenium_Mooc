@@ -1,4 +1,5 @@
 import time
+from tqdm import tqdm
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from common.to_url import to_url
@@ -14,18 +15,16 @@ def work_1_correct(_driver):
     #   获取当前未审批人数 (234人 -> 234)
     people_num = _driver.find_element(By.XPATH, '//*[@id="container"]/div[1]/div[2]/h2/span').text[:-1]
 
-    for i in range(2, int(people_num) + 1):
+    for i in tqdm(range(2, int(people_num) + 1)):
         check_answers(_driver)
-        time.sleep(2)
         _driver.find_element(By.XPATH, '//*[@id="submitHomeWork"]').click()  # 点击 <批阅> 按钮
         _driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/div[3]/div/a[1]').click()  # 确定批阅
-        time.sleep(2)
+        time.sleep(1.5)
         # 点击 <确定> 关闭弹窗
         _driver.find_element(By.CLASS_NAME, 'sgBtn').click()
-        time.sleep(2)
         # 点击左侧列表切换下一个同学
         _driver.find_element(By.XPATH, '//*[@id="container"]/div[1]/div[2]/ul/li[' + str(i) + ']/a').click()
-        time.sleep(3)
+        time.sleep(1)
 
 
 def check_answers(_driver):
