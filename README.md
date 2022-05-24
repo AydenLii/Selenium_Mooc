@@ -12,3 +12,5 @@
 
 - 运行 `main.py` 
 
+## function
+- `work_1_correcting.py` :批阅 <体育（篮球）--第四次开课> 的 <第一次课作业>
