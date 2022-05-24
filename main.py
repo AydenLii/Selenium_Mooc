@@ -1,5 +1,5 @@
-from driver.home_page import *
-from two.two_work import *
+import driver
+from works.work_2.correct import work_2_correct
 
 if __name__ == "__main__":
     driver = driver_init()  # 浏览器初始化
