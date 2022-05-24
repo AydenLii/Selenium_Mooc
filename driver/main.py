@@ -13,7 +13,7 @@ def driver_init():
 
 def read_cookies(_driver):
     # 从cookies.txt文件读取cookies
-    f2 = open("./cookie.txt")
+    f2 = open("../out/cookie.txt")
     cookies = json.loads(f2.read())
     # 使用cookies登录
     for cook in cookies:
