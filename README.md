@@ -1,6 +1,6 @@
 # Selenium_Mooc
 
-基于Selenium的自动化批改学生作业脚本
+基于Selenium的Mooc自动化批改学生作业脚本
 
 
 
