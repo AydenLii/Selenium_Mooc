@@ -1,4 +1,5 @@
 import driver
+from works.work_1.correct import work_1_correct
 from works.work_2.correct import work_2_correct
 
 if __name__ == "__main__":
