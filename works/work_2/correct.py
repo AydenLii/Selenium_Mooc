@@ -6,8 +6,6 @@ from works.work_2.information import *
 from tqdm import tqdm
 
 
-
-
 def work_2_correct(_driver):
     """
     切换到作业二，并获取当前需要批改的作业数
@@ -21,7 +19,6 @@ def work_2_correct(_driver):
     """
 
     for i in tqdm(range(1, people_count + 1)):
-
         _driver.find_element(By.XPATH, "//*[@id=\"container\"]/div[1]/div[2]/ul/li[" + str(i) + "]/a").click()
 
         time.sleep(0.4)
@@ -40,6 +37,3 @@ def work_2_correct(_driver):
         time.sleep(0.5)
         _driver.find_element(By.CLASS_NAME, "sgBtn").click()
         time.sleep(0.5)
-
-
-
