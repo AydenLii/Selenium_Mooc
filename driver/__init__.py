@@ -1,4 +1,6 @@
+import time
 from common.read_cookies import read_cookies
+from driver.cookie import get_cookies
 from driver.driver_init import *
 
 
@@ -10,3 +12,8 @@ def diver_web():
     driver.get("https://mooc.icve.com.cn/design/workExam/homework/homework.html?courseOpenId=x6nvaeouv5tfvankjlmxsq")
     time.sleep(2)
     return driver
+
+
+def get_cookie():
+    tur = driver_init()
+    get_cookies(tur[0], tur[1])

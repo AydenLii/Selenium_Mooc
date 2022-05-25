@@ -4,6 +4,7 @@ from works.work_1.correct import work_1_correct
 from works.work_2.correct import work_2_correct
 
 if __name__ == "__main__":
+
     value = input('输入审批课程索引值(1~11):\n')
     driver = driver.diver_web()
 
