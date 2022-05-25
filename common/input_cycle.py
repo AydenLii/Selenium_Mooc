@@ -18,7 +18,6 @@ def cycle_2(_driver, file, text, question):
             input_score_random(_driver, question, 30, 33)
     else:
         input_score_random(_driver, question, 43, 45)
-<<<<<<< Updated upstream
 
 def cycle_3(_driver, file, text, question):
     """
@@ -36,5 +35,3 @@ def cycle_3(_driver, file, text, question):
             input_score_random(_driver, question, 20, 22)
     else:
         input_score_random(_driver, question, 30, 33)
-=======
->>>>>>> Stashed changes
