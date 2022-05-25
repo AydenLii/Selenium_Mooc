@@ -5,26 +5,28 @@ from selenium.webdriver.common.by import By
 from common.to_url import to_url
 
 
-# 批阅 <体育（篮球）--第四次开课> 的 <第一次课作业>
-
 def work_1_correct(_driver):
     # 跳转到 <未审批> 页面
-    to_url(_driver, "https://mooc.icve.com.cn/design/workExam/homework/preview.html?courseOpenId=x6nvaeouv5tfvankjlmxsq" \
-                    "&homeworkId=warvaeouy4zia4becmb7ew&pageType=mark ")
+    to_url(_driver,
+           "https://mooc.icve.com.cn/design/workExam/homework/preview.html?courseOpenId=x6nvaeouv5tfvankjlmxsq"
+           "&homeworkId=warvaeouy4zia4becmb7ew&pageType=mark")
+    # 获取当前未审批人数
+    people_num = int(_driver.find_element(By.XPATH, '//*[@id="container"]/div[1]/div[2]/h2/span').text[:-1])
 
-    #   获取当前未审批人数 (234人 -> 234)
-    people_num = _driver.find_element(By.XPATH, '//*[@id="container"]/div[1]/div[2]/h2/span').text[:-1]
-
-    for i in tqdm(range(2, int(people_num) + 1)):
+    for i in tqdm(range(people_num)):  # //循环people_num次
         check_answers(_driver)
         _driver.find_element(By.XPATH, '//*[@id="submitHomeWork"]').click()  # 点击 <批阅> 按钮
         _driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/div[3]/div/a[1]').click()  # 确定批阅
         time.sleep(1.5)
-        # 点击 <确定> 关闭弹窗
-        _driver.find_element(By.CLASS_NAME, 'sgBtn').click()
-        # 点击左侧列表切换下一个同学
-        _driver.find_element(By.XPATH, '//*[@id="container"]/div[1]/div[2]/ul/li[' + str(i) + ']/a').click()
-        time.sleep(1)
+        _driver.find_element(By.CLASS_NAME, 'sgBtn').click()  # 点击 <确定> 关闭弹窗
+
+        # 判断当前是否是最后一名同学
+        if i != people_num - 1:
+            # 点击左侧列表切换下一个同学
+            _driver.find_element(By.XPATH, '//*[@id="container"]/div[1]/div[2]/ul/li[' + str(i + 2) + ']/a').click()
+            time.sleep(1)
+
+    print("作业批改完成!")
 
 
 def check_answers(_driver):
@@ -51,9 +53,9 @@ def check_answers(_driver):
                                    '//*[@id="questionContainer"]/div/div[2]/div[5]/form/div/div[1]/div[2]/div['
                                    '3]/div/input')
 
-    answer_list = [answer_1, answer_2, answer_3, answer_4]  # 答案列表
+    answer_list = [answer_1, answer_2, answer_3, answer_4]  # 提交答案列表
     input_list = [input_1, input_2, input_3, input_4]  # 分数框<input>对象列表
-    correct_answer_list = ['银', '13', '1891', '奈史密斯']  # 正确的答案包含的字符串列表
+    correct_answer_list = ['银', '13', '1891', '奈史密斯']  # 正确答案包含的字符串列表
 
     # 填入分数
     for i in range(4):
