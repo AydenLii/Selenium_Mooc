@@ -17,7 +17,8 @@ def cycle_2(_driver, file, text, question):
         else:
             input_score_random(_driver, question, 30, 33)
     else:
-        input_score_random(_driver, question, 43, 45)
+        input_score_random(_driver, question, 45, 48)
+
 
 def cycle_3(_driver, file, text, question):
     """
@@ -34,4 +35,4 @@ def cycle_3(_driver, file, text, question):
         else:
             input_score_random(_driver, question, 20, 22)
     else:
-        input_score_random(_driver, question, 30, 33)
+        input_score_random(_driver, question, 30, 32)

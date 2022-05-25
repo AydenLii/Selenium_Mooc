@@ -3,7 +3,10 @@ import time
 import json
 
 
-def get_cookies(url, _driver):
+from driver.driver_init import *
+
+
+def get_cookies(_driver, url):
     if not os.path.exists('../out/'):  # 判断<out>文件夹是否存在
         os.makedirs('../out/')  # 不存在则新建<out>文件夹
     os.chdir('../out/')
@@ -15,5 +18,4 @@ def get_cookies(url, _driver):
     with open('../out/cookie.txt', 'w') as f:
         f.write(json_cookies)
     print('cookies保存成功！')
-
 

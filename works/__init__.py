@@ -1,6 +1,7 @@
 import time
-from common.read_cookies import read_cookies
-from driver.cookie import get_cookies
+from works.essay_question.correct import work_1_correct
+from works.subject_question import accessory
+from driver.read_cookies import read_cookies
 from driver.driver_init import *
 
 
@@ -13,7 +14,10 @@ def diver_web():
     time.sleep(2)
     return driver
 
-
-def get_cookie():
-    tur = driver_init()
-    get_cookies(tur[0], tur[1])
+def works():
+    value = input('输入审批课程索引值(1~11):\n')
+    driver = diver_web()
+    if value == '1':
+        work_1_correct(driver)
+    else:
+        accessory(driver, value)

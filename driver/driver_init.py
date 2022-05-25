@@ -1,11 +1,12 @@
 from selenium import webdriver
 
 
+def driver_url():
+    url = 'https://mooc.icve.com.cn/'
+    return url
+
+
 def driver_init():
     _driver = webdriver.Chrome()
-    url = 'https://mooc.icve.com.cn/'
-    _driver.get(url)
-    return url, _driver
-
-
-
+    _driver.get(driver_url())
+    return _driver
