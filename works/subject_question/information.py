@@ -11,5 +11,5 @@ question_3 = "//*[@id=\"questionContainer\"]/div/div[2]/div[4]/form/div/div[1]/d
 
 
 def work_variable(value):
-    work_value = '//*[@id="maintab_homework"]/li['+value+']/div[2]/a[3]'
+    work_value = '//*[@id="maintab_homework"]/li['+str(value)+']/div[2]/a[3]'
     return work_value

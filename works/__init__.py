@@ -14,6 +14,7 @@ def diver_web():
     time.sleep(2)
     return driver
 
+
 def works():
     value = input('输入审批课程索引值(1~11):\n')
     driver = diver_web()
