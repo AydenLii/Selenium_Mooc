@@ -15,11 +15,8 @@ def init(_driver, _value):
 if __name__ == "__main__":
     value = input('输入审批课程索引值:\n')
     driver = driver.diver_web()
-<<<<<<< Updated upstream
    # work_1_correct(driver)
    # work_2_correct(driver)
     work_3_correct(driver)
-
-=======
     init(driver, value)
->>>>>>> Stashed changes
+
