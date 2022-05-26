@@ -31,12 +31,14 @@ def works_statr():
 
 # def works_statr():
 #     course_num = 11
-#     for i in range(1, course_num + 1):
+#     for i in range(2, course_num + 1):
+#         work_num = str(i)
 #         driver = diver_web()
-#         if i == '1':
+#         driver.implicitly_wait(10)
+#         if work_num == '1':
 #             work_1_correct(driver)
-#             print('任务' + i + '批改完成')
+#             print('任务' + work_num + '批改完成')
 #         else:
-#             accessory(driver, i)
-#             print('任务' + i + '批改完成')
-#
+#             accessory(driver, work_num)
+#             print('任务' + work_num + '批改完成')
+

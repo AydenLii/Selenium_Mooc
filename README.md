@@ -13,7 +13,7 @@
 ```python
 # pip install -r requirements.txt
 selenium>=4.1.0
-tqdn>=4.64.0
+tqdm
 ```
 
 ## Usage

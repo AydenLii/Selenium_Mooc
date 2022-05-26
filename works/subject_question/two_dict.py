@@ -17,7 +17,8 @@ def two_dict_correct(_driver, value):
     """
     遍历所有学生
     """
-    print('当前作业任务为:作业' + value + ',需要批改的作业共计:' + str(people_count) + '份')
+    people_print = str(people_count)
+    print('当前作业任务为:作业' + value + ',需要批改的作业共计:' + people_print + '份')
 
     for i in tqdm(range(1, people_count + 1)):
         _driver.find_element(By.XPATH, "//*[@id=\"container\"]/div[1]/div[2]/ul/li[" + str(i) + "]/a").click()
