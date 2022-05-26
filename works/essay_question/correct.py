@@ -12,6 +12,7 @@ def work_1_correct(_driver):
            "&homeworkId=warvaeouy4zia4becmb7ew&pageType=mark")
     # 获取当前未审批人数
     people_num = int(_driver.find_element(By.XPATH, '//*[@id="container"]/div[1]/div[2]/h2/span').text[:-1])
+    print('当前作业任务为:作业1' + ',需要批改的作业共计:' + str(people_num) + '份')
 
     for i in tqdm(range(people_num)):  # //循环people_num次
         check_answers(_driver)
@@ -25,8 +26,6 @@ def work_1_correct(_driver):
             # 点击左侧列表切换下一个同学
             _driver.find_element(By.XPATH, '//*[@id="container"]/div[1]/div[2]/ul/li[' + str(i + 2) + ']/a').click()
             time.sleep(1)
-
-    print("作业批改完成!")
 
 
 def check_answers(_driver):

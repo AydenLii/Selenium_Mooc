@@ -1,4 +1,4 @@
-from works import works
+from works import works_statr
 
 if __name__ == "__main__":
-    works()
+    works_statr()
