@@ -1,5 +1,5 @@
 #过滤cookie文件
-*.txt
+cookie.txt
 #过滤由Pycham产生的文件
 __pycache__/
 *.py[cod]
