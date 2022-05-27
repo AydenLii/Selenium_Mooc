@@ -34,7 +34,6 @@ def works_statr():
 #     for i in range(2, course_num + 1):
 #         work_num = str(i)
 #         driver = diver_web()
-#         driver.implicitly_wait(10)
 #         if work_num == '1':
 #             work_1_correct(driver)
 #             print('任务' + work_num + '批改完成')

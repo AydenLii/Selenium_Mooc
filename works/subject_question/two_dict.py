@@ -23,7 +23,7 @@ def two_dict_correct(_driver, value):
     for i in tqdm(range(1, people_count + 1)):
         _driver.find_element(By.XPATH, "//*[@id=\"container\"]/div[1]/div[2]/ul/li[" + str(i) + "]/a").click()
 
-        time.sleep(0.5)
+        time.sleep(0.3)
         question_text1_bool = _driver.find_element(By.XPATH, question_text1).text
         question_text2_bool = _driver.find_element(By.XPATH, question_text2).text
         question_file1_bool = _driver.find_element(By.XPATH, question_file1).text
@@ -32,10 +32,6 @@ def two_dict_correct(_driver, value):
         cycle_2(_driver, question_file1_bool, question_text1_bool, question_1)
         cycle_2(_driver, question_file2_bool, question_text2_bool, question_2)
 
-        time.sleep(0.5)
         _driver.find_element(By.CSS_SELECTOR, "#submitHomeWork").click()
-
         _driver.find_element(By.CLASS_NAME, "sgBtn").click()
-        time.sleep(0.5)
         _driver.find_element(By.CLASS_NAME, "sgBtn").click()
-        time.sleep(0.3)

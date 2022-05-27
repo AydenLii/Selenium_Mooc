@@ -33,10 +33,8 @@ def three_dict_correct(_driver, value):
         cycle_3(_driver, question_file1_bool, question_text1_bool, question_1)
         cycle_3(_driver, question_file2_bool, question_text2_bool, question_2)
         cycle_3(_driver, question_file3_bool, question_text3_bool, question_3)
-        time.sleep(0.3)
-        _driver.find_element(By.CSS_SELECTOR, "#submitHomeWork").click()
 
+        _driver.find_element(By.CSS_SELECTOR, "#submitHomeWork").click()
         _driver.find_element(By.CLASS_NAME, "sgBtn").click()
-        time.sleep(0.3)
         _driver.find_element(By.CLASS_NAME, "sgBtn").click()
-        time.sleep(0.3)
+
