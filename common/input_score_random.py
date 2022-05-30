@@ -12,6 +12,8 @@ def input_score_random(_driver, _xpath, min_score, max_score):
     :return:
     """
     score = random.randint(min_score, max_score)
-    _driver.find_element(By.XPATH, _xpath).send_keys(Keys.CONTROL, 'a')
-    _driver.find_element(By.XPATH, _xpath).send_keys(score)
+    send_a = _driver.find_element(By.XPATH, _xpath)
+    send_a.send_keys(Keys.CONTROL, 'a')
+    send_score = _driver.find_element(By.XPATH, _xpath)
+    send_score.send_keys(score)
 

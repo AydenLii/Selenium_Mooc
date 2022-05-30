@@ -16,13 +16,13 @@ def diver_web():
 
 
 def works_statr():
-    value = input('输入审批课程索引值(1~11):')
+    course_value = input('输入审批课程索引值(1~11):')
     driver = diver_web()
-    if value == '1':
+    if course_value == '1':
         work_1_correct(driver)
     else:
-        accessory(driver, value)
-    print('任务' + value + '批改完成')
+        accessory(driver, course_value)
+    print('任务' + course_value + '批改完成')
 
     '''
     被注释掉的方法用于批量执行作业批改任务
@@ -31,7 +31,7 @@ def works_statr():
 
 # def works_statr():
 #     course_num = 11
-#     for i in range(2, course_num + 1):
+#     for i in range(6, course_num + 1):
 #         work_num = str(i)
 #         driver = diver_web()
 #         if work_num == '1':
