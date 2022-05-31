@@ -20,6 +20,8 @@ TestPage_text = "/html/body/div[2]/div/div/div/div/div[2]/div/div[2]/div[2]/form
 TestPage_file = "/html/body/div[2]/div/div/div/div/div[2]/div/div[2]/div[2]/form/div/div[1]/div[2]/div[3]/div[4]/a"
 TestPage_input = '/html/body/div[2]/div/div/div/div/div[2]/div/div[2]/div[2]/form/div/div[1]/div[2]/div[3]/div[1]/input'
 
+remove_page = 'https://mooc.icve.com.cn/design/workExam/homework/homeworkStu.html?courseOpenId=x6nvaeouv5tfvankjlmxsq&homeworkId=warvaeoug6xmgahqfdc7vw#page=255'
+
 
 def work_variable(value):
     work_value = '//*[@id="maintab_homework"]/li[' + str(value) + ']/div[2]/a[3]'
