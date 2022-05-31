@@ -7,3 +7,5 @@ __pycache__/
 .idea/
 #过滤测试文件
 test.py
+#过滤密码
+passwd.txt
