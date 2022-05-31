@@ -39,8 +39,9 @@ def works_statr_1(course_value):
 
 
 def works_statr_auto_1():
-    course_num = 11
-    for i in range(1, course_num + 1):
+    max_course = int(input("最大批改数:"))
+    min_course = int(input("最小批改数:"))
+    for i in range(min_course, max_course + 1):
         work_num = str(i)
         driver = diver_web_1()
         if work_num == '1':
@@ -61,8 +62,9 @@ def works_statr_2():
 
 
 def works_statr_auto_2():
-    course_num_2 = 14
-    for i in range(2, course_num_2 + 1):
+    max_course = int(input("最大批改数:"))
+    min_course = int(input("最小批改数:"))
+    for i in range(min_course, max_course + 1):
         work_num = str(i)
         driver = diver_web_2()
         if work_num == '1':
