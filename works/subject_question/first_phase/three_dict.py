@@ -24,7 +24,7 @@ def three_dict_correct(_driver, value):
     for i in tqdm(range(1, people_count + 1)):
         _driver.find_element(By.XPATH, "//*[@id=\"container\"]/div[1]/div[2]/ul/li[" + str(i) + "]/a").click()
 
-        time.sleep(0.8)
+        time.sleep(0.3)
         question_text1_bool = _driver.find_element(By.XPATH, question_text1).text
         question_text2_bool = _driver.find_element(By.XPATH, question_text2).text
         question_text3_bool = _driver.find_element(By.XPATH, question_text3).text
@@ -32,7 +32,7 @@ def three_dict_correct(_driver, value):
         question_file2_bool = _driver.find_element(By.XPATH, question_file2).text
         question_file3_bool = _driver.find_element(By.XPATH, question_file3).text
 
-        time.sleep(0.2)
+        time.sleep(0.1)
         cycle_3(_driver, question_file1_bool, question_text1_bool, question_1)
         cycle_3(_driver, question_file2_bool, question_text2_bool, question_2)
         cycle_3(_driver, question_file3_bool, question_text3_bool, question_3)

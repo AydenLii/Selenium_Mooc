@@ -22,10 +22,10 @@ def one_examination(_driver):
     for i in tqdm(range(1, people_count + 1)):
         _driver.find_element(By.XPATH, "//*[@id=\"container\"]/div[1]/div[2]/ul/li[" + str(i) + "]/a").click()
 
-        time.sleep(0.6)
+        time.sleep(0.3)
         question_text_bool = _driver.find_element(By.XPATH, TestPage_text).text
         question_file_bool = _driver.find_element(By.XPATH, TestPage_file).text
         cycle_exam(_driver, question_file_bool, question_text_bool, TestPage_input)
 
-        time.sleep(0.5)
+        time.sleep(0.1)
         exam_wait_submit(_driver)

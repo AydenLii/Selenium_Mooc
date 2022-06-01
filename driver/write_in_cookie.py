@@ -9,7 +9,7 @@ def get_cookies(_driver, url):
     os.chdir('../out/')
     _driver.get(url)
     _driver.find_element(By.ID, "home-login-register").click()
-    time.sleep(30)  # 进行扫码登录
+    time.sleep(20)  # 进行扫码登录
     dict_cookies = _driver.get_cookies()  # 获取list的cookies
     json_cookies = json.dumps(dict_cookies)  # 转换成字符串保存
 
