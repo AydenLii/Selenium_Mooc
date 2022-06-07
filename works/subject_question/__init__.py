@@ -6,6 +6,7 @@ from driver.driver_init import *
 from works.subject_question.first_phase import first_accessory
 from works.subject_question.first_phase.examination import one_examination
 from works.subject_question.second_phase import second_accessory
+from works.subject_question.second_phase.ques_answer_combination import Second_dict
 
 
 def diver_web_1():
@@ -49,13 +50,14 @@ def works_statr_auto_1():
         else:
             first_accessory(driver, work_num)
             print('任务' + work_num + '批改完成')
+    diver_web_1()
 
 
-def works_statr_2():
-    course_value = input('输入审批课程索引值(1~11):')
+def works_statr_2(course_value):
+    # course_value = input('输入审批课程索引值(1~11):')
     driver = diver_web_2()
-    if course_value == '1':
-        print("还未开发")
+    if course_value == 1:
+        Second_dict(driver)
     else:
         second_accessory(driver, course_value)
     print('任务' + course_value + '批改完成')
@@ -68,8 +70,8 @@ def works_statr_auto_2():
         work_num = str(i)
         driver = diver_web_2()
         if work_num == '1':
-            print("还未开发")
-            print('任务' + work_num + '批改完成')
+            Second_dict(driver)
         else:
             second_accessory(driver, work_num)
             print('任务' + work_num + '批改完成')
+    diver_web_2()

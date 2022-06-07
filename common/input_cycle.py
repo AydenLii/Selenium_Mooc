@@ -33,9 +33,9 @@ def cycle(_driver, file, text, question):
         if len(text) == 0:
             input_score(_driver, question, 0)
         else:
-            input_score_random(_driver, question, 45, 48)
+            input_score_random(_driver, question, 40, 48)
     else:
-        input_score_random(_driver, question, 45, 48)
+        input_score_random(_driver, question, 40, 48)
 
 
 def cycle_3(_driver, file, text, question):
@@ -72,3 +72,17 @@ def cycle_exam(_driver, file, text, question):
             input_score_random(_driver, question, 80, 90)
     else:
         input_score_random(_driver, question, 83, 93)
+
+def cycle_exam_two(_driver, file,  question):
+    """
+    !!!用于判断2个选项的题目
+    :param _driver: 当前 Driver
+    :param file: 输入文件类型的答案
+    :param text: 输入文本类型的答案
+    :param question: 分数框地址
+    :return:
+    """
+    if file == '学生未作答':
+        input_score(_driver, question, 30)
+    else:
+        input_score_random(_driver, question, 40, 46)

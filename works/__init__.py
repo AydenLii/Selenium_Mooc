@@ -3,11 +3,12 @@ from works.subject_question import *
 
 from works.subject_question.first_phase.examination import one_examination
 from works.subject_question.first_phase.remove_the_0 import remove_0
+from works.subject_question.second_phase.examination import Second_examination
 
 
 def test_task():
-    driver = diver_web_1()
-    one_examination(driver)
+    driver = diver_web_2()
+    Second_examination(driver)
 
 def qing_test():
     driver = diver_web_1()
