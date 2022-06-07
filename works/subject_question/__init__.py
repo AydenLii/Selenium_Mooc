@@ -71,6 +71,7 @@ def works_statr_auto_2():
         driver = diver_web_2()
         if work_num == '1':
             Second_dict(driver)
+            print('任务' + work_num + '批改完成')
         else:
             second_accessory(driver, work_num)
             print('任务' + work_num + '批改完成')
