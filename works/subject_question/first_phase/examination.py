@@ -11,7 +11,7 @@ from tqdm import tqdm
 from works.subject_question.first_phase.information import *
 
 
-def one_examination(_driver):
+def first_examination(_driver):
     time.sleep(2)
     _driver.get(theTestPage)
     time.sleep(1)
@@ -29,3 +29,5 @@ def one_examination(_driver):
 
         time.sleep(0.1)
         exam_wait_submit(_driver)
+
+

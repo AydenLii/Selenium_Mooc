@@ -1,9 +1,8 @@
 from works.essay_question.correct import work_1_correct
 from works.subject_question import *
 
-from works.subject_question.first_phase.examination import one_examination
 from works.subject_question.first_phase.remove_the_0 import remove_0
-from works.subject_question.second_phase.examination import Second_examination
+
 
 
 def test_task():

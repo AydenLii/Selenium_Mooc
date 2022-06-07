@@ -1,11 +1,13 @@
 import time
+
 from works.essay_question.correct import work_1_correct
 
 from driver.read_cookies import read_cookies
 from driver.driver_init import *
 from works.subject_question.first_phase import first_accessory
-from works.subject_question.first_phase.examination import one_examination
+from works.subject_question.first_phase.examination import first_examination
 from works.subject_question.second_phase import second_accessory
+from works.subject_question.second_phase.examination import Second_examination
 from works.subject_question.second_phase.ques_answer_combination import Second_dict
 
 
@@ -50,7 +52,7 @@ def works_statr_auto_1():
         else:
             first_accessory(driver, work_num)
             print('任务' + work_num + '批改完成')
-    diver_web_1()
+    first_examination(driver)
 
 
 def works_statr_2(course_value):
@@ -75,4 +77,4 @@ def works_statr_auto_2():
         else:
             second_accessory(driver, work_num)
             print('任务' + work_num + '批改完成')
-    diver_web_2()
+    Second_examination(driver)
